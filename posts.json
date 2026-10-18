@@ -565,13 +565,13 @@
   "kind": "V",
   "grp": "pary",
   "title": "Pre dvoch",
-  "tone": "light",
-  "L": 166,
+  "tone": "dark",
+  "L": 83,
   "red": 0,
   "head": "f_hlava",
   "q": 3,
-  "edge": 218,
-  "darkShare": 0.22
+  "edge": 63,
+  "darkShare": 0.55
  },
  {
   "id": "d42",
