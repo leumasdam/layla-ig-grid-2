@@ -566,12 +566,12 @@
   "grp": "pary",
   "title": "Pre dvoch",
   "tone": "light",
-  "L": 180,
+  "L": 166,
   "red": 0,
   "head": "f_hlava",
   "q": 3,
   "edge": 218,
-  "darkShare": 0.08
+  "darkShare": 0.22
  },
  {
   "id": "d42",
