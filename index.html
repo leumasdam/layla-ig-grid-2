@@ -242,6 +242,7 @@
 <body>
 <div class="bar"><div class="bar__in">
   <div class="grp"><span>Stĺpce</span><div class="seg" data-seg="cols"><button data-v="3">3</button><button data-v="4">4</button><button data-v="6">6</button></div></div>
+  <div class="grp"><span>Verzia</span><div class="seg" data-seg="look"><button data-v="off" title="Pôvodné posty">Pôvodná</button><button data-v="c" title="Čistý redizajn: ploché farby, mriežka, zaoblené fotky">Čistá</button><button data-v="p" title="Čistá + polkruh, papier, linky, makro detaily, olivový akcent">Pro</button></div></div>
   <div class="grp"><span>Úprava</span><div class="seg" data-seg="mode"><button data-v="move" title="Ťahaj post na nové miesto">Presúvať</button><button data-v="swap" title="Klikni na dva posty – vymenia sa">Vymieňať</button></div></div>
   <div class="grp"><span>Zobraziť</span>
     <select data-view>
@@ -425,7 +426,7 @@
   const st = {
     order: init.order, parked: init.parked,
     locked: new Set((saved.locked || []).map((id) => byId[id]).filter((i) => i !== undefined)),
-    cols: innerWidth < 760 ? 3 : +(url.get("cols") || saved.cols || 3), mode: saved.mode || "move", view: saved.view || "none", num: !!saved.num, bad: saved.bad ?? false, depth: false, look: "off",
+    cols: innerWidth < 760 ? 3 : +(url.get("cols") || saved.cols || 3), mode: saved.mode || "move", view: saved.view || "none", num: !!saved.num, bad: saved.bad ?? false, depth: false, look: ["off", "c", "p"].includes(url.get("g") || saved.look) ? (url.get("g") || saved.look) : "p",
     opt: { ...Rhythm.DEFAULTS, ...(saved.opt || {}) }, seed: saved.seed || 3,
     hidden: new Set(), undo: [], redo: [], sel: null, parkMin: saved.parkMin ?? innerWidth < 760,
   };
