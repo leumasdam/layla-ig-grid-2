@@ -242,7 +242,6 @@
 <body>
 <div class="bar"><div class="bar__in">
   <div class="grp"><span>Stĺpce</span><div class="seg" data-seg="cols"><button data-v="3">3</button><button data-v="4">4</button><button data-v="6">6</button></div></div>
-  <div class="grp"><span>Verzia</span><div class="seg" data-seg="look"><button data-v="off" title="Pôvodná typografia (Playfair + Figtree)">v2</button><button data-v="t" title="Typografický pokus: Neue Haas Grotesk + kurzíva Playfair + General Sans">v3 · typo</button></div></div>
   <div class="grp"><span>Úprava</span><div class="seg" data-seg="mode"><button data-v="move" title="Ťahaj post na nové miesto">Presúvať</button><button data-v="swap" title="Klikni na dva posty – vymenia sa">Vymieňať</button></div></div>
   <div class="grp"><span>Zobraziť</span>
     <select data-view>
@@ -387,7 +386,7 @@
   const TONE = { dark: ["Tmavý", "#111", "#666"], light: ["Svetlý", "#f2f2f2"] };
   const QUAL = { 3: ["★ Silný a čistý", "#fbbf24"], 2: ["Bežný", "#9ca3af"], 1: ["▽ Slabší", "#6b7280"] };
   const KIND = { T: ["Typografia", "#fbbf24"], F: ["Fotka / scéna", "#60a5fa"], O: ["Objekt / detail", "#f472b6"], V: ["Fotka + text", "#c2ad98"], W: ["Web mockup", "#38bdf8"] };
-  const KEY = "layla-grid-planner-v5";
+  const KEY = "layla-grid-planner-v6";
   const url = new URLSearchParams(location.search);
   const VIEW = url.has("view");
   if (VIEW) document.body.classList.add("viewmode");
@@ -426,7 +425,7 @@
   const st = {
     order: init.order, parked: init.parked,
     locked: new Set((saved.locked || []).map((id) => byId[id]).filter((i) => i !== undefined)),
-    cols: innerWidth < 760 ? 3 : +(url.get("cols") || saved.cols || 3), mode: saved.mode || "move", view: saved.view || "none", num: !!saved.num, bad: saved.bad ?? true, depth: false, look: ["off", "t"].includes(url.get("g") || saved.look) ? (url.get("g") || saved.look) : "off",
+    cols: innerWidth < 760 ? 3 : +(url.get("cols") || saved.cols || 3), mode: saved.mode || "move", view: saved.view || "none", num: !!saved.num, bad: saved.bad ?? false, depth: false, look: "off",
     opt: { ...Rhythm.DEFAULTS, ...(saved.opt || {}) }, seed: saved.seed || 3,
     hidden: new Set(), undo: [], redo: [], sel: null, parkMin: saved.parkMin ?? innerWidth < 760,
   };
