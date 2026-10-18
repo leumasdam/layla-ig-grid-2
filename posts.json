@@ -972,12 +972,12 @@
   "grp": "edu",
   "title": "Carousel: Prečo po bankovaní ostanú kruhy?",
   "tone": "light",
-  "L": 158,
+  "L": 167,
   "red": 0,
   "head": "f_banky",
   "q": 3,
-  "edge": 168,
-  "darkShare": 0.17
+  "edge": 172,
+  "darkShare": 0.12
  },
  {
   "id": "e2",
@@ -986,12 +986,12 @@
   "grp": "edu",
   "title": "Carousel: Maderoterapia – čo robia valčeky?",
   "tone": "light",
-  "L": 159,
+  "L": 166,
   "red": 0,
   "head": "f_madero",
   "q": 3,
-  "edge": 161,
-  "darkShare": 0.08
+  "edge": 165,
+  "darkShare": 0.06
  },
  {
   "id": "e3",
@@ -1000,12 +1000,12 @@
   "grp": "edu",
   "title": "Carousel: Idete na prvú masáž?",
   "tone": "light",
-  "L": 162,
+  "L": 170,
   "red": 0,
   "head": "f_hlava",
   "q": 3,
-  "edge": 164,
-  "darkShare": 0.06
+  "edge": 169,
+  "darkShare": 0.02
  },
  {
   "id": "e4",
@@ -1014,12 +1014,12 @@
   "grp": "edu",
   "title": "Carousel: 30, 60 alebo 90 minút?",
   "tone": "light",
-  "L": 163,
+  "L": 171,
   "red": 0,
   "head": "f_chrbat",
   "q": 3,
-  "edge": 183,
-  "darkShare": 0.08
+  "edge": 188,
+  "darkShare": 0.06
  },
  {
   "id": "e5",
@@ -1028,12 +1028,12 @@
   "grp": "edu",
   "title": "Carousel: Scratching therapy",
   "tone": "light",
-  "L": 157,
+  "L": 165,
   "red": 0,
   "head": "f_ruky",
   "q": 3,
-  "edge": 161,
-  "darkShare": 0.05
+  "edge": 166,
+  "darkShare": 0.04
  },
  {
   "id": "c1",
