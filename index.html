@@ -138,7 +138,12 @@
   .toast.on { transform: translate(-50%, 0); }
   .lb { position: fixed; inset: 0; background: rgba(0,0,0,.9); display: none; place-items: center; z-index: 60; }
   .lb.on { display: grid; }
-  .lb img { max-height: 90vh; max-width: 90vw; border-radius: 4px; }
+  .lb img { max-height: 88vh; max-width: min(90vw, 760px); border-radius: 4px; box-shadow: 0 20px 60px rgba(0,0,0,.5); }
+  .lb__nav { position: absolute; top: 50%; transform: translateY(-50%); width: 56px; height: 56px; border-radius: 50%; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.08); color: #fff; font-size: 34px; line-height: 1; cursor: pointer; }
+  .lb__nav:hover { background: rgba(255,255,255,.2); }
+  .lb__prev { left: max(16px, env(safe-area-inset-left, 0px)); } .lb__next { right: max(16px, env(safe-area-inset-right, 0px)); }
+  .lb__x { position: absolute; top: 16px; right: 16px; width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255,255,255,.12); color: #fff; font-size: 26px; cursor: pointer; }
+  .tile .ctl button[data-zoom] { font-size: 15px; }
   .lb p { position: absolute; bottom: 18px; left: 0; right: 0; text-align: center; color: #ddd; font-size: 13px; }
   .issues { max-width: 1400px; margin: 0 auto; padding: 6px 16px 0; font-size: 12px; color: #ff8b8f; display: none; }
   .issues.on { display: block; }
@@ -237,6 +242,7 @@
 <body>
 <div class="bar"><div class="bar__in">
   <div class="grp"><span>Stĺpce</span><div class="seg" data-seg="cols"><button data-v="3">3</button><button data-v="4">4</button><button data-v="6">6</button></div></div>
+  <div class="grp"><span>Verzia</span><div class="seg" data-seg="look"><button data-v="off" title="Pôvodná typografia (Playfair + Figtree)">v2</button><button data-v="t" title="Typografický pokus: Neue Haas Grotesk + kurzíva Playfair + General Sans">v3 · typo</button></div></div>
   <div class="grp"><span>Úprava</span><div class="seg" data-seg="mode"><button data-v="move" title="Ťahaj post na nové miesto">Presúvať</button><button data-v="swap" title="Klikni na dva posty – vymenia sa">Vymieňať</button></div></div>
   <div class="grp"><span>Zobraziť</span>
     <select data-view>
@@ -307,7 +313,7 @@
     <span><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M10 9l5 3-5 3z"/></svg></span>
     <span><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M7 19c1-3 3-4 5-4s4 1 5 4"/></svg></span>
   </div>
-  <p class="help">Ťahaj posty myšou · <b>⤓</b> odloží post mimo gridu · režim <b>Vymieňať</b>: klikni na dva posty · zámok = post zostane na mieste pri „Navrhnúť rytmus“ · dvojklik = veľký náhľad · <kbd>Ctrl Z</kbd> späť</p>
+  <p class="help">Klik na post = veľký náhľad (šípky ← → listujú) · ťahaj posty myšou · <b>⤓</b> odloží post mimo gridu · režim <b>Vymieňať</b>: klikni na dva posty · zámok = post zostane na mieste pri „Navrhnúť rytmus“ · dvojklik = veľký náhľad · <kbd>Ctrl Z</kbd> späť</p>
   <div class="grid" data-grid data-zone="grid"></div>
 </main>
 
@@ -371,7 +377,7 @@
 </section>
 
 <div class="toast" data-toast></div>
-<div class="lb" data-lb><img alt=""><p></p></div>
+<div class="lb" data-lb><button class="lb__nav lb__prev" data-lb-prev aria-label="Predošlý post">‹</button><img alt=""><button class="lb__nav lb__next" data-lb-next aria-label="Ďalší post">›</button><button class="lb__x" data-lb-x aria-label="Zavrieť">×</button><p></p></div>
 
 <script>
 (() => {
@@ -420,7 +426,7 @@
   const st = {
     order: init.order, parked: init.parked,
     locked: new Set((saved.locked || []).map((id) => byId[id]).filter((i) => i !== undefined)),
-    cols: innerWidth < 760 ? 3 : +(url.get("cols") || saved.cols || 3), mode: saved.mode || "move", view: saved.view || "none", num: !!saved.num, bad: saved.bad ?? true, depth: false, look: "off",
+    cols: innerWidth < 760 ? 3 : +(url.get("cols") || saved.cols || 3), mode: saved.mode || "move", view: saved.view || "none", num: !!saved.num, bad: saved.bad ?? true, depth: false, look: ["off", "t"].includes(url.get("g") || saved.look) ? (url.get("g") || saved.look) : "off",
     opt: { ...Rhythm.DEFAULTS, ...(saved.opt || {}) }, seed: saved.seed || 3,
     hidden: new Set(), undo: [], redo: [], sel: null, parkMin: saved.parkMin ?? innerWidth < 760,
   };
@@ -473,10 +479,11 @@
     const p = P[pi], t = tagOf(p), inGrid = zone === "grid";
     const cls = ["tile", inGrid && st.locked.has(pi) && "locked", inGrid && bad && "bad", inGrid && st.sel === pos && "sel", t && st.hidden.has(t[2]) && "dim"].filter(Boolean).join(" ");
     const ctl = inGrid
-      ? `<button class="star q${p.q}" data-star="${pi}" title="Kvalita: ${QUAL[p.q][0]} – klik mení">${p.q === 3 ? "★" : p.q === 1 ? "▽" : "☆"}</button>
+      ? `<button data-zoom title="Zobraziť v plnej veľkosti">⤢</button>
+         <button class="star q${p.q}" data-star="${pi}" title="Kvalita: ${QUAL[p.q][0]} – klik mení">${p.q === 3 ? "★" : p.q === 1 ? "▽" : "☆"}</button>
          <button data-park-it="${pos}" title="Odložiť mimo gridu">⤓</button>
          <button class="lock" data-lock="${pi}" title="${st.locked.has(pi) ? "Odomknúť" : "Zamknúť na mieste"}"><svg viewBox="0 0 24 24">${st.locked.has(pi) ? LOCK_ON : LOCK_OFF}</svg></button>`
-      : `<button data-unpark="${pos}" title="Vrátiť na koniec gridu">⤒</button>`;
+      : `<button data-zoom title="Zobraziť v plnej veľkosti">⤢</button><button data-unpark="${pos}" title="Vrátiť na koniec gridu">⤒</button>`;
     return `<div class="${cls}" draggable="${!VIEW}" data-zone="${zone}" data-pos="${pos}" title="${p.title}">
       <img src="${dir("thumbs")}/${p.id}.webp" alt="${p.title}" loading="lazy">
       ${inGrid ? `<span class="num">${pos + 1}</span>` : ""}
@@ -572,6 +579,7 @@
     if (VIEW) {
       const t = e.target.closest(".tile"); if (t) openLb(t); return;
     }
+    const zm = e.target.closest("[data-zoom]"); if (zm) { openLb(zm.closest(".tile")); return; }
     const star = e.target.closest("[data-star]");
     if (star) { const p = P[+star.dataset.star]; p.q = p.q === 3 ? 1 : p.q === 1 ? 2 : 3; render(); save(); toast(`Kvalita: ${QUAL[p.q][0]} – prejaví sa pri „Navrhnúť rytmus“`); return; }
     const lock = e.target.closest("[data-lock]");
@@ -595,6 +603,9 @@
       if (st.sel === pos) { st.sel = null; render(); return; }
       const o = st.order.slice(); [o[st.sel], o[pos]] = [o[pos], o[st.sel]]; st.sel = null; commit({ order: o }, "Vymenené"); return;
     }
+    // režim Presúvať: klik (bez ťahania) na post otvorí veľký náhľad
+    const tz = e.target.closest(".tile");
+    if (tz && st.mode === "move" && !e.target.closest(".ctl")) { openLb(tz); return; }
 
     const act = e.target.closest("[data-act]")?.dataset.act;
     if (!act) return;
@@ -668,16 +679,24 @@
       : `<div>Pri ${nf(PL.followers)} sledovateľoch uvidí jeden post približne <b>${nf(PL.followers * PL.reach / 100)} z nich</b> a ďalších ≈ ${nf(PL.extra)} ľudí mimo profilu.${PL.ads ? ` Reklama za ${nf(PL.ads)} € mesačne pridá ≈ ${nf(adViews / Math.max(months, 1))} zobrazení mesačne.` : ""}</div>`;
   }
   // ---------- veľký náhľad ----------
-  function openLb(t) {
-    const pi = t.dataset.zone === "park" ? st.parked[+t.dataset.pos] : st.order[+t.dataset.pos], p = P[pi], lb = $("[data-lb]");
-    lb.querySelector("img").src = `${dir("export")}/${p.id}.jpg`;
-    lb.querySelector("p").textContent = VIEW ? `${p.title}  ·  Esc zavrie` : `${t.dataset.zone === "park" ? "Odložené" : "#" + (+t.dataset.pos + 1)} · ${CAT[p.cat][0]} · ${p.title} · ${TONE[p.tone][0]} · ${KIND[p.kind][0]}  (Esc zavrie)`;
-    lb.classList.add("on");
+  let lbZone = "grid", lbPos = 0;
+  function lbShow() {
+    const list = lbZone === "park" ? st.parked : st.order; lbPos = (lbPos + list.length) % list.length;
+    const p = P[list[lbPos]], lb = $("[data-lb]");
+    lb.querySelector("img").src = `${dir("export")}/${p.id}.jpg`; lb.querySelector("img").alt = p.title;
+    lb.querySelector("p").textContent = VIEW ? `${lbPos + 1} / ${list.length}  ·  ${p.title}  ·  ← → listovanie, Esc zavrie`
+      : `${lbZone === "park" ? "Odložené" : "#" + (lbPos + 1)} / ${list.length} · ${CAT[p.cat][0]} · ${p.title}  ·  ← → listovanie, Esc zavrie`;
   }
+  function openLb(t) { lbZone = t.dataset.zone === "park" ? "park" : "grid"; lbPos = +t.dataset.pos; lbShow(); $("[data-lb]").classList.add("on"); }
   document.addEventListener("dblclick", (e) => { const t = e.target.closest(".tile"); if (t && !VIEW) openLb(t); });
-  $("[data-lb]").addEventListener("click", (e) => { e.stopPropagation(); $("[data-lb]").classList.remove("on"); });
+  $("[data-lb]").addEventListener("click", (e) => { e.stopPropagation();
+    if (e.target.closest("[data-lb-prev]")) { lbPos--; lbShow(); return; }
+    if (e.target.closest("[data-lb-next]")) { lbPos++; lbShow(); return; }
+    if (e.target.tagName === "IMG") return;
+    $("[data-lb]").classList.remove("on"); });
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") { $("[data-lb]").classList.remove("on"); if (st.sel !== null) { st.sel = null; render(); } }
+    if ($("[data-lb]").classList.contains("on") && (e.key === "ArrowLeft" || e.key === "ArrowRight")) { lbPos += e.key === "ArrowLeft" ? -1 : 1; lbShow(); return; }
     if (VIEW) return;
     if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "z") { e.preventDefault(); $("[data-act=undo]").click(); }
     if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "y") { e.preventDefault(); $("[data-act=redo]").click(); }
