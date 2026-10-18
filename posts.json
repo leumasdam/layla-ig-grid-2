@@ -8,7 +8,7 @@
   "tone": "light",
   "L": 157,
   "red": 0,
-  "head": null,
+  "head": "f_studio",
   "q": 2,
   "edge": 247,
   "darkShare": 0.24
@@ -50,7 +50,7 @@
   "tone": "dark",
   "L": 85,
   "red": 0,
-  "head": null,
+  "head": "f_banky",
   "q": 2,
   "edge": 80,
   "darkShare": 0.56
@@ -78,7 +78,7 @@
   "tone": "light",
   "L": 177,
   "red": 0,
-  "head": null,
+  "head": "f_banky",
   "q": 3,
   "edge": 211,
   "darkShare": 0.08
@@ -92,7 +92,7 @@
   "tone": "light",
   "L": 188,
   "red": 0,
-  "head": null,
+  "head": "f_lounge",
   "q": 3,
   "edge": 131,
   "darkShare": 0.04
@@ -134,7 +134,7 @@
   "tone": "light",
   "L": 155,
   "red": 0,
-  "head": null,
+  "head": "f_hlava",
   "q": 2,
   "edge": 159,
   "darkShare": 0.16
@@ -148,7 +148,7 @@
   "tone": "light",
   "L": 171,
   "red": 0,
-  "head": null,
+  "head": "f_madero",
   "q": 2,
   "edge": 247,
   "darkShare": 0.17
@@ -162,7 +162,7 @@
   "tone": "dark",
   "L": 115,
   "red": 0,
-  "head": "telo",
+  "head": "f_lounge",
   "q": 2,
   "edge": 74,
   "darkShare": 0.48
@@ -176,7 +176,7 @@
   "tone": "light",
   "L": 183,
   "red": 0,
-  "head": null,
+  "head": "f_studio",
   "q": 2,
   "edge": 157,
   "darkShare": 0.1
@@ -190,7 +190,7 @@
   "tone": "dark",
   "L": 91,
   "red": 0,
-  "head": null,
+  "head": "f_chrbat",
   "q": 2,
   "edge": 74,
   "darkShare": 0.48
@@ -218,7 +218,7 @@
   "tone": "light",
   "L": 195,
   "red": 0,
-  "head": null,
+  "head": "f_hlava",
   "q": 3,
   "edge": 207,
   "darkShare": 0.05
@@ -274,7 +274,7 @@
   "tone": "dark",
   "L": 63,
   "red": 0,
-  "head": null,
+  "head": "f_ruky",
   "q": 2,
   "edge": 28,
   "darkShare": 0.66
@@ -484,7 +484,7 @@
   "tone": "light",
   "L": 176,
   "red": 0,
-  "head": null,
+  "head": "f_banky",
   "q": 3,
   "edge": 219,
   "darkShare": 0.11
@@ -526,7 +526,7 @@
   "tone": "light",
   "L": 165,
   "red": 0,
-  "head": null,
+  "head": "f_chrbat",
   "q": 3,
   "edge": 209,
   "darkShare": 0.14
@@ -568,7 +568,7 @@
   "tone": "light",
   "L": 178,
   "red": 0,
-  "head": null,
+  "head": "f_hlava",
   "q": 3,
   "edge": 215,
   "darkShare": 0.08
@@ -652,7 +652,7 @@
   "tone": "dark",
   "L": 112,
   "red": 0,
-  "head": null,
+  "head": "f_studio",
   "q": 3,
   "edge": 110,
   "darkShare": 0.39
@@ -680,7 +680,7 @@
   "tone": "dark",
   "L": 100,
   "red": 0,
-  "head": null,
+  "head": "f_hlava",
   "q": 3,
   "edge": 89,
   "darkShare": 0.22
@@ -708,7 +708,7 @@
   "tone": "dark",
   "L": 100,
   "red": 0,
-  "head": null,
+  "head": "f_madero",
   "q": 3,
   "edge": 88,
   "darkShare": 0.22
@@ -722,7 +722,7 @@
   "tone": "dark",
   "L": 114,
   "red": 0,
-  "head": null,
+  "head": "f_chrbat",
   "q": 3,
   "edge": 124,
   "darkShare": 0.18
@@ -750,7 +750,7 @@
   "tone": "dark",
   "L": 101,
   "red": 0,
-  "head": null,
+  "head": "f_banky",
   "q": 3,
   "edge": 102,
   "darkShare": 0.35
@@ -778,7 +778,7 @@
   "tone": "dark",
   "L": 87,
   "red": 0,
-  "head": null,
+  "head": "f_lounge",
   "q": 3,
   "edge": 82,
   "darkShare": 0.55
@@ -792,7 +792,7 @@
   "tone": "dark",
   "L": 98,
   "red": 0,
-  "head": null,
+  "head": "f_ruky",
   "q": 3,
   "edge": 85,
   "darkShare": 0.32
@@ -820,7 +820,7 @@
   "tone": "light",
   "L": 157,
   "red": 0,
-  "head": null,
+  "head": "f_banky",
   "q": 3,
   "edge": 167,
   "darkShare": 0.17
@@ -834,7 +834,7 @@
   "tone": "light",
   "L": 158,
   "red": 0,
-  "head": null,
+  "head": "f_madero",
   "q": 3,
   "edge": 160,
   "darkShare": 0.07
@@ -848,7 +848,7 @@
   "tone": "light",
   "L": 161,
   "red": 0,
-  "head": null,
+  "head": "f_hlava",
   "q": 3,
   "edge": 163,
   "darkShare": 0.06
@@ -862,7 +862,7 @@
   "tone": "light",
   "L": 162,
   "red": 0,
-  "head": null,
+  "head": "f_chrbat",
   "q": 3,
   "edge": 181,
   "darkShare": 0.08
@@ -876,7 +876,7 @@
   "tone": "light",
   "L": 156,
   "red": 0,
-  "head": null,
+  "head": "f_ruky",
   "q": 3,
   "edge": 160,
   "darkShare": 0.05

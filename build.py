@@ -67,6 +67,12 @@ for k, (e, title) in enumerate(EDU, 1):
     add(f"e{k}", f"edu_a2/LAYLA_edu_{e}_1.png", "V", "edukacia", "edu", None, 3, title)
 add("c1", "LAYLA_carousel_1_v2_1080x1350.png", "V", "cennik", "cennik", None, 3, "Carousel: Cenník masáží")
 
+# posty z tej istej fotky nesmú byť blízko seba → spoločný „head“ (rytmus ho drží od seba)
+SAME = {"f_banky": ["e1", "r08", "d04", "d35", "d06"], "f_madero": ["e2", "r05", "d06", "d11"], "f_hlava": ["e3", "r03", "d10", "d16", "d35", "d41"],
+        "f_chrbat": ["e4", "r06", "d14", "d38"], "f_studio": ["r01", "d01", "d38", "d13"], "f_ruky": ["e5", "r11", "d20"], "f_lounge": ["r10", "d07", "d12"]}
+HEAD = {}
+for h, ids in SAME.items():
+    for i in ids: HEAD.setdefault(i, h)
 # návrh: výber (24 navrhnutých) + v každom riadku jedna reálna fotka po uhlopriečke, medzi to obálky carouselov
 VYBER = ["d22", "d23", "d25", "d26", "d32", "d21", "d33", "d27", "d02", "d34", "d40", "d29", "d28", "d39", "d36", "d37", "d31", "d09", "d38", "d16", "d03", "d06", "d07", "d35"]
 grid, d = [], 0
@@ -89,7 +95,7 @@ for pid, (f, kind, cat, grp, head, q, title) in T.items():
     L = a.mean(); dark = (a < 80).mean()
     e = np.concatenate([a[:8].ravel(), a[-8:].ravel(), a[:, :8].ravel(), a[:, -8:].ravel()]).mean()
     posts.append(dict(id=pid, cat=cat, kind=kind, grp=grp, title=title, tone="dark" if L < 125 else "light",
-                      L=round(L), red=0, head=head, q=q, edge=round(e), darkShare=round(dark, 2)))
+                      L=round(L), red=0, head=HEAD.get(pid, head), q=q, edge=round(e), darkShare=round(dark, 2)))
 (ROOT / "data.js").write_text("window.POSTS=" + json.dumps(posts, ensure_ascii=False) + ";\n", encoding="utf-8")
 (ROOT / "thumbs-data.js").write_text("window.THUMBS=" + json.dumps(thumbs) + ";\n", encoding="utf-8")
 (ROOT / "posts.json").write_text(json.dumps(posts, ensure_ascii=False, indent=1), encoding="utf-8")
