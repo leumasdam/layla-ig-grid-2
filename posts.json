@@ -6,12 +6,12 @@
   "grp": "studio",
   "title": "Pokojné štúdio v Piešťanoch",
   "tone": "light",
-  "L": 161,
+  "L": 158,
   "red": 0,
   "head": "f_studio",
   "q": 2,
-  "edge": 242,
-  "darkShare": 0.21
+  "edge": 247,
+  "darkShare": 0.25
  },
  {
   "id": "d02",
@@ -20,7 +20,7 @@
   "grp": "dotyk",
   "title": "Dotyk, ktorý uvoľní telo aj myseľ",
   "tone": "light",
-  "L": 188,
+  "L": 187,
   "red": 0,
   "head": "dotyk",
   "q": 3,
@@ -34,12 +34,12 @@
   "grp": "madero",
   "title": "Maderoterapia – oblúk a cena",
   "tone": "light",
-  "L": 167,
+  "L": 165,
   "red": 0,
   "head": "f_madero",
   "q": 3,
-  "edge": 209,
-  "darkShare": 0.14
+  "edge": 212,
+  "darkShare": 0.21
  },
  {
   "id": "d04",
@@ -48,12 +48,12 @@
   "grp": "banky",
   "title": "Bankovanie",
   "tone": "dark",
-  "L": 94,
+  "L": 85,
   "red": 0,
   "head": "f_banky",
   "q": 2,
-  "edge": 90,
-  "darkShare": 0.52
+  "edge": 80,
+  "darkShare": 0.56
  },
  {
   "id": "d05",
@@ -62,12 +62,12 @@
   "grp": "poukaz",
   "title": "Darujte chvíľu pokoja",
   "tone": "light",
-  "L": 210,
+  "L": 212,
   "red": 0,
   "head": null,
   "q": 2,
-  "edge": 215,
-  "darkShare": 0.04
+  "edge": 217,
+  "darkShare": 0.05
  },
  {
   "id": "d06",
@@ -76,12 +76,12 @@
   "grp": "sluzby",
   "title": "Naše služby – štyri oblúky",
   "tone": "light",
-  "L": 180,
+  "L": 179,
   "red": 0,
   "head": "f_banky",
   "q": 3,
-  "edge": 211,
-  "darkShare": 0.05
+  "edge": 214,
+  "darkShare": 0.08
  },
  {
   "id": "d07",
@@ -94,8 +94,8 @@
   "red": 0,
   "head": "f_lounge",
   "q": 3,
-  "edge": 139,
-  "darkShare": 0.03
+  "edge": 133,
+  "darkShare": 0.04
  },
  {
   "id": "d08",
@@ -104,12 +104,12 @@
   "grp": "nohy",
   "title": "Ľahší krok – masáž nôh",
   "tone": "dark",
-  "L": 81,
+  "L": 70,
   "red": 0,
   "head": null,
   "q": 2,
-  "edge": 64,
-  "darkShare": 0.6
+  "edge": 52,
+  "darkShare": 0.75
  },
  {
   "id": "d09",
@@ -118,12 +118,12 @@
   "grp": "rezerv",
   "title": "Rezervujte si svoj čas",
   "tone": "light",
-  "L": 209,
+  "L": 211,
   "red": 0,
   "head": null,
   "q": 3,
-  "edge": 221,
-  "darkShare": 0.03
+  "edge": 225,
+  "darkShare": 0.04
  },
  {
   "id": "d10",
@@ -132,12 +132,12 @@
   "grp": "chrbat",
   "title": "Masáž chrbta, šije a ramien",
   "tone": "light",
-  "L": 159,
+  "L": 156,
   "red": 0,
   "head": "f_hlava",
   "q": 2,
-  "edge": 162,
-  "darkShare": 0.11
+  "edge": 159,
+  "darkShare": 0.17
  },
  {
   "id": "d11",
@@ -146,12 +146,12 @@
   "grp": "studio",
   "title": "Miesto, kde spomalíte – mozaika",
   "tone": "light",
-  "L": 173,
+  "L": 172,
   "red": 0,
   "head": "f_madero",
   "q": 2,
-  "edge": 242,
-  "darkShare": 0.12
+  "edge": 248,
+  "darkShare": 0.17
  },
  {
   "id": "d12",
@@ -160,12 +160,12 @@
   "grp": "telomysel",
   "title": "Telo v pohode – kruh",
   "tone": "dark",
-  "L": 121,
+  "L": 115,
   "red": 0,
   "head": "f_lounge",
   "q": 2,
-  "edge": 84,
-  "darkShare": 0.42
+  "edge": 74,
+  "darkShare": 0.48
  },
  {
   "id": "d13",
@@ -178,8 +178,8 @@
   "red": 0,
   "head": "f_studio",
   "q": 2,
-  "edge": 161,
-  "darkShare": 0.08
+  "edge": 158,
+  "darkShare": 0.1
  },
  {
   "id": "d14",
@@ -188,12 +188,12 @@
   "grp": null,
   "title": "Magazín – Chvíľa pre seba",
   "tone": "dark",
-  "L": 100,
+  "L": 91,
   "red": 0,
   "head": "f_chrbat",
   "q": 2,
-  "edge": 84,
-  "darkShare": 0.38
+  "edge": 74,
+  "darkShare": 0.49
  },
  {
   "id": "d15",
@@ -206,8 +206,8 @@
   "red": 0,
   "head": null,
   "q": 1,
-  "edge": 221,
-  "darkShare": 0.13
+  "edge": 225,
+  "darkShare": 0.15
  },
  {
   "id": "d16",
@@ -216,12 +216,12 @@
   "grp": "dlzka",
   "title": "Koľko času máte?",
   "tone": "light",
-  "L": 196,
+  "L": 197,
   "red": 0,
   "head": "f_hlava",
   "q": 3,
-  "edge": 208,
-  "darkShare": 0.03
+  "edge": 210,
+  "darkShare": 0.05
  },
  {
   "id": "d17",
@@ -230,12 +230,12 @@
   "grp": "madero",
   "title": "Drevo, teplo a pokoj",
   "tone": "light",
-  "L": 149,
+  "L": 146,
   "red": 0,
   "head": "f_madero",
   "q": 2,
-  "edge": 152,
-  "darkShare": 0.31
+  "edge": 149,
+  "darkShare": 0.37
  },
  {
   "id": "d18",
@@ -244,12 +244,12 @@
   "grp": "dych",
   "title": "Nádych. Výdych.",
   "tone": "light",
-  "L": 218,
+  "L": 222,
   "red": 0,
   "head": null,
   "q": 2,
-  "edge": 230,
-  "darkShare": 0.03
+  "edge": 234,
+  "darkShare": 0.04
  },
  {
   "id": "d19",
@@ -258,12 +258,12 @@
   "grp": "preco",
   "title": "Prečo práve my?",
   "tone": "light",
-  "L": 186,
+  "L": 187,
   "red": 0,
   "head": "f_studio",
   "q": 3,
-  "edge": 206,
-  "darkShare": 0.05
+  "edge": 208,
+  "darkShare": 0.08
  },
  {
   "id": "d20",
@@ -272,12 +272,12 @@
   "grp": "uvolnenie",
   "title": "Uvoľnenie od hlavy po päty – rám",
   "tone": "dark",
-  "L": 73,
+  "L": 63,
   "red": 0,
   "head": "f_ruky",
   "q": 2,
-  "edge": 38,
-  "darkShare": 0.62
+  "edge": 28,
+  "darkShare": 0.67
  },
  {
   "id": "d21",
@@ -286,12 +286,12 @@
   "grp": "dotyk",
   "title": "Dotyk, ktorý navracia rovnováhu",
   "tone": "light",
-  "L": 212,
+  "L": 215,
   "red": 0,
   "head": "dotyk",
   "q": 3,
   "edge": 191,
-  "darkShare": 0.09
+  "darkShare": 0.1
  },
  {
   "id": "d22",
@@ -300,11 +300,11 @@
   "grp": "telo",
   "title": "Telo v pohode – hero",
   "tone": "light",
-  "L": 163,
+  "L": 160,
   "red": 0,
   "head": "telo",
   "q": 3,
-  "edge": 165,
+  "edge": 162,
   "darkShare": 0.02
  },
  {
@@ -314,11 +314,11 @@
   "grp": "logo",
   "title": "Logo LAYLA",
   "tone": "light",
-  "L": 224,
+  "L": 229,
   "red": 0,
   "head": null,
   "q": 3,
-  "edge": 227,
+  "edge": 232,
   "darkShare": 0.02
  },
  {
@@ -328,11 +328,11 @@
   "grp": "zlava",
   "title": "−10 % na prvú masáž",
   "tone": "light",
-  "L": 163,
+  "L": 160,
   "red": 0,
   "head": null,
   "q": 2,
-  "edge": 164,
+  "edge": 161,
   "darkShare": 0.0
  },
  {
@@ -342,12 +342,12 @@
   "grp": "spomal",
   "title": "Spomaľte.",
   "tone": "dark",
-  "L": 123,
+  "L": 115,
   "red": 0,
   "head": null,
   "q": 3,
-  "edge": 112,
-  "darkShare": 0.17
+  "edge": 105,
+  "darkShare": 0.28
  },
  {
   "id": "d26",
@@ -356,11 +356,11 @@
   "grp": null,
   "title": "Nemusíte nič robiť. Stačí prísť.",
   "tone": "light",
-  "L": 212,
+  "L": 214,
   "red": 0,
   "head": null,
   "q": 3,
-  "edge": 211,
+  "edge": 213,
   "darkShare": 0.01
  },
  {
@@ -370,12 +370,12 @@
   "grp": "sluzby",
   "title": "Ponuka veľkými",
   "tone": "light",
-  "L": 227,
+  "L": 230,
   "red": 0,
   "head": null,
   "q": 3,
-  "edge": 231,
-  "darkShare": 0.0
+  "edge": 235,
+  "darkShare": 0.01
  },
  {
   "id": "d28",
@@ -384,11 +384,11 @@
   "grp": "uvolnenie",
   "title": "Od hlavy po päty",
   "tone": "light",
-  "L": 219,
+  "L": 222,
   "red": 0,
   "head": null,
   "q": 3,
-  "edge": 222,
+  "edge": 225,
   "darkShare": 0.0
  },
  {
@@ -398,11 +398,11 @@
   "grp": "poukaz",
   "title": "Darujte pokoj",
   "tone": "light",
-  "L": 223,
+  "L": 227,
   "red": 0,
   "head": null,
   "q": 3,
-  "edge": 228,
+  "edge": 232,
   "darkShare": 0.02
  },
  {
@@ -412,12 +412,12 @@
   "grp": "kde",
   "title": "Kde nás nájdete",
   "tone": "light",
-  "L": 177,
+  "L": 175,
   "red": 0,
   "head": null,
   "q": 2,
-  "edge": 137,
-  "darkShare": 0.0
+  "edge": 131,
+  "darkShare": 0.02
  },
  {
   "id": "d31",
@@ -426,12 +426,12 @@
   "grp": null,
   "title": "pokoj. – foto v písme",
   "tone": "light",
-  "L": 197,
+  "L": 198,
   "red": 0,
   "head": null,
   "q": 3,
-  "edge": 202,
-  "darkShare": 0.02
+  "edge": 204,
+  "darkShare": 0.03
  },
  {
   "id": "d32",
@@ -454,12 +454,12 @@
   "grp": "studio",
   "title": "Päť okien – štúdio",
   "tone": "light",
-  "L": 179,
+  "L": 178,
   "red": 0,
   "head": "f_studio",
   "q": 3,
-  "edge": 210,
-  "darkShare": 0.06
+  "edge": 212,
+  "darkShare": 0.1
  },
  {
   "id": "d34",
@@ -468,12 +468,12 @@
   "grp": "spomal",
   "title": "Večer len pre vás",
   "tone": "light",
-  "L": 203,
+  "L": 205,
   "red": 0,
   "head": null,
   "q": 3,
-  "edge": 218,
-  "darkShare": 0.01
+  "edge": 221,
+  "darkShare": 0.03
  },
  {
   "id": "d35",
@@ -482,12 +482,12 @@
   "grp": "sluzby",
   "title": "Vyberte si svoj rytmus",
   "tone": "light",
-  "L": 179,
+  "L": 178,
   "red": 0,
   "head": "f_banky",
   "q": 3,
-  "edge": 219,
-  "darkShare": 0.08
+  "edge": 222,
+  "darkShare": 0.12
  },
  {
   "id": "d36",
@@ -496,11 +496,11 @@
   "grp": null,
   "title": "Telo si pamätá – stuha",
   "tone": "light",
-  "L": 155,
+  "L": 151,
   "red": 0,
   "head": null,
   "q": 2,
-  "edge": 160,
+  "edge": 156,
   "darkShare": 0.09
  },
  {
@@ -510,11 +510,11 @@
   "grp": "poukaz",
   "title": "Poukaz ako vstupenka",
   "tone": "light",
-  "L": 223,
+  "L": 226,
   "red": 0,
   "head": null,
   "q": 3,
-  "edge": 206,
+  "edge": 208,
   "darkShare": 0.0
  },
  {
@@ -524,12 +524,12 @@
   "grp": "studio",
   "title": "Priestor, ktorý dýcha",
   "tone": "light",
-  "L": 169,
+  "L": 167,
   "red": 0,
   "head": "f_chrbat",
   "q": 3,
-  "edge": 210,
-  "darkShare": 0.11
+  "edge": 212,
+  "darkShare": 0.14
  },
  {
   "id": "d39",
@@ -538,11 +538,11 @@
   "grp": "hodiny",
   "title": "Každý deň 8 – 20",
   "tone": "light",
-  "L": 204,
+  "L": 205,
   "red": 0,
   "head": null,
   "q": 3,
-  "edge": 201,
+  "edge": 202,
   "darkShare": 0.0
  },
  {
@@ -566,12 +566,12 @@
   "grp": "pary",
   "title": "Pre dvoch",
   "tone": "light",
-  "L": 181,
+  "L": 180,
   "red": 0,
   "head": "f_hlava",
   "q": 3,
-  "edge": 215,
-  "darkShare": 0.06
+  "edge": 218,
+  "darkShare": 0.08
  },
  {
   "id": "d42",
@@ -580,12 +580,12 @@
   "grp": "pary",
   "title": "Rande inak",
   "tone": "dark",
-  "L": 118,
+  "L": 111,
   "red": 0,
   "head": null,
   "q": 2,
-  "edge": 108,
-  "darkShare": 0.21
+  "edge": 100,
+  "darkShare": 0.34
  },
  {
   "id": "d43",
@@ -594,11 +594,11 @@
   "grp": "pary",
   "title": "Ty a ja",
   "tone": "light",
-  "L": 208,
+  "L": 209,
   "red": 0,
   "head": null,
   "q": 2,
-  "edge": 218,
+  "edge": 221,
   "darkShare": 0.0
  },
  {
@@ -622,11 +622,11 @@
   "grp": "poukaz",
   "title": "Darujte čas pre dvoch",
   "tone": "light",
-  "L": 223,
+  "L": 226,
   "red": 0,
   "head": null,
   "q": 2,
-  "edge": 228,
+  "edge": 232,
   "darkShare": 0.02
  },
  {
@@ -636,12 +636,12 @@
   "grp": "pary",
   "title": "Bez telefónu",
   "tone": "light",
-  "L": 212,
+  "L": 215,
   "red": 0,
   "head": null,
   "q": 2,
   "edge": 191,
-  "darkShare": 0.09
+  "darkShare": 0.1
  },
  {
   "id": "r01",
@@ -650,12 +650,12 @@
   "grp": null,
   "title": "Fotka zo štúdia – Štúdio",
   "tone": "dark",
-  "L": 120,
+  "L": 113,
   "red": 0,
   "head": "f_studio",
   "q": 3,
-  "edge": 118,
-  "darkShare": 0.35
+  "edge": 111,
+  "darkShare": 0.4
  },
  {
   "id": "r02",
@@ -664,12 +664,12 @@
   "grp": null,
   "title": "Fotka zo štúdia – Uteráky a sviečky",
   "tone": "dark",
-  "L": 120,
+  "L": 113,
   "red": 0,
   "head": "f_uteraky",
   "q": 3,
-  "edge": 115,
-  "darkShare": 0.26
+  "edge": 107,
+  "darkShare": 0.36
  },
  {
   "id": "r03",
@@ -678,12 +678,12 @@
   "grp": null,
   "title": "Fotka zo štúdia – Masáž hlavy",
   "tone": "dark",
-  "L": 110,
+  "L": 101,
   "red": 0,
   "head": "f_hlava",
   "q": 3,
-  "edge": 98,
-  "darkShare": 0.15
+  "edge": 88,
+  "darkShare": 0.23
  },
  {
   "id": "r04",
@@ -692,12 +692,12 @@
   "grp": null,
   "title": "Fotka zo štúdia – Svetlo, ktoré upokojí",
   "tone": "light",
-  "L": 143,
+  "L": 137,
   "red": 0,
   "head": "f_komoda",
   "q": 3,
-  "edge": 130,
-  "darkShare": 0.01
+  "edge": 123,
+  "darkShare": 0.04
  },
  {
   "id": "r05",
@@ -706,12 +706,12 @@
   "grp": null,
   "title": "Fotka zo štúdia – Nástroje na maderoterapiu",
   "tone": "dark",
-  "L": 110,
+  "L": 100,
   "red": 0,
   "head": "f_madero",
   "q": 3,
-  "edge": 98,
-  "darkShare": 0.14
+  "edge": 88,
+  "darkShare": 0.23
  },
  {
   "id": "r06",
@@ -720,12 +720,12 @@
   "grp": null,
   "title": "Fotka zo štúdia – Masáž chrbta",
   "tone": "dark",
-  "L": 123,
+  "L": 115,
   "red": 0,
   "head": "f_chrbat",
   "q": 3,
-  "edge": 131,
-  "darkShare": 0.11
+  "edge": 125,
+  "darkShare": 0.19
  },
  {
   "id": "r07",
@@ -734,12 +734,12 @@
   "grp": null,
   "title": "Fotka zo štúdia – Monstera a sviečky",
   "tone": "light",
-  "L": 136,
+  "L": 130,
   "red": 0,
   "head": "f_komoda",
   "q": 3,
-  "edge": 147,
-  "darkShare": 0.07
+  "edge": 143,
+  "darkShare": 0.19
  },
  {
   "id": "r08",
@@ -748,12 +748,12 @@
   "grp": null,
   "title": "Fotka zo štúdia – Banky",
   "tone": "dark",
-  "L": 110,
+  "L": 101,
   "red": 0,
   "head": "f_banky",
   "q": 3,
-  "edge": 111,
-  "darkShare": 0.26
+  "edge": 103,
+  "darkShare": 0.36
  },
  {
   "id": "r09",
@@ -762,12 +762,12 @@
   "grp": null,
   "title": "Fotka zo štúdia – Masáž nôh",
   "tone": "dark",
-  "L": 78,
+  "L": 67,
   "red": 0,
   "head": null,
   "q": 3,
-  "edge": 68,
-  "darkShare": 0.58
+  "edge": 57,
+  "darkShare": 0.74
  },
  {
   "id": "r10",
@@ -776,12 +776,12 @@
   "grp": null,
   "title": "Fotka zo štúdia – Oddychový kútik",
   "tone": "dark",
-  "L": 96,
+  "L": 87,
   "red": 0,
   "head": "f_lounge",
   "q": 3,
-  "edge": 92,
-  "darkShare": 0.47
+  "edge": 82,
+  "darkShare": 0.56
  },
  {
   "id": "r11",
@@ -790,12 +790,12 @@
   "grp": null,
   "title": "Fotka zo štúdia – Masáž chrbta – štyri ruky",
   "tone": "dark",
-  "L": 107,
+  "L": 98,
   "red": 0,
   "head": "f_ruky",
   "q": 3,
-  "edge": 95,
-  "darkShare": 0.22
+  "edge": 85,
+  "darkShare": 0.33
  },
  {
   "id": "r12",
@@ -804,12 +804,12 @@
   "grp": null,
   "title": "Fotka zo štúdia – Hodžova 4304/20",
   "tone": "light",
-  "L": 141,
+  "L": 136,
   "red": 0,
   "head": null,
   "q": 3,
-  "edge": 155,
-  "darkShare": 0.19
+  "edge": 152,
+  "darkShare": 0.24
  },
  {
   "id": "r13",
@@ -818,12 +818,12 @@
   "grp": null,
   "title": "Fotka zo štúdia – Uteráky pri sviečke",
   "tone": "light",
-  "L": 134,
+  "L": 128,
   "red": 0,
   "head": "f_uteraky",
   "q": 3,
-  "edge": 136,
-  "darkShare": 0.18
+  "edge": 130,
+  "darkShare": 0.24
  },
  {
   "id": "r14",
@@ -832,12 +832,12 @@
   "grp": null,
   "title": "Fotka zo štúdia – Sviečky a difuzér",
   "tone": "light",
-  "L": 133,
+  "L": 127,
   "red": 0,
   "head": "f_komoda",
   "q": 3,
-  "edge": 116,
-  "darkShare": 0.16
+  "edge": 109,
+  "darkShare": 0.22
  },
  {
   "id": "r15",
@@ -846,12 +846,12 @@
   "grp": null,
   "title": "Fotka zo štúdia – Monstera",
   "tone": "dark",
-  "L": 90,
+  "L": 80,
   "red": 0,
   "head": "f_komoda",
   "q": 3,
-  "edge": 87,
-  "darkShare": 0.51
+  "edge": 77,
+  "darkShare": 0.61
  },
  {
   "id": "r16",
@@ -860,12 +860,12 @@
   "grp": null,
   "title": "Fotka zo štúdia – Valčeky na maderoterapiu",
   "tone": "dark",
-  "L": 78,
+  "L": 67,
   "red": 0,
   "head": "f_madero",
   "q": 3,
-  "edge": 71,
-  "darkShare": 0.58
+  "edge": 60,
+  "darkShare": 0.7
  },
  {
   "id": "r17",
@@ -874,12 +874,12 @@
   "grp": null,
   "title": "Fotka zo štúdia – Banky a kliešte",
   "tone": "dark",
-  "L": 112,
+  "L": 104,
   "red": 0,
   "head": "f_banky",
   "q": 3,
-  "edge": 108,
-  "darkShare": 0.26
+  "edge": 99,
+  "darkShare": 0.34
  },
  {
   "id": "r18",
@@ -888,12 +888,12 @@
   "grp": null,
   "title": "Fotka zo štúdia – Nástroje na komode",
   "tone": "dark",
-  "L": 106,
+  "L": 98,
   "red": 0,
   "head": "f_madero",
   "q": 3,
-  "edge": 103,
-  "darkShare": 0.33
+  "edge": 94,
+  "darkShare": 0.46
  },
  {
   "id": "r19",
@@ -902,12 +902,12 @@
   "grp": null,
   "title": "Fotka zo štúdia – Masáž šije",
   "tone": "dark",
-  "L": 107,
+  "L": 98,
   "red": 0,
   "head": "f_chrbat",
   "q": 3,
-  "edge": 115,
-  "darkShare": 0.43
+  "edge": 107,
+  "darkShare": 0.54
  },
  {
   "id": "r20",
@@ -916,12 +916,12 @@
   "grp": null,
   "title": "Fotka zo štúdia – Ruky na chrbte",
   "tone": "dark",
-  "L": 104,
+  "L": 94,
   "red": 0,
   "head": "f_ruky",
   "q": 3,
-  "edge": 97,
-  "darkShare": 0.19
+  "edge": 87,
+  "darkShare": 0.31
  },
  {
   "id": "r21",
@@ -930,12 +930,12 @@
   "grp": null,
   "title": "Fotka zo štúdia – Masáž hlavy zblízka",
   "tone": "dark",
-  "L": 107,
+  "L": 98,
   "red": 0,
   "head": "f_hlava",
   "q": 3,
-  "edge": 98,
-  "darkShare": 0.2
+  "edge": 88,
+  "darkShare": 0.3
  },
  {
   "id": "r22",
@@ -944,12 +944,26 @@
   "grp": null,
   "title": "Fotka zo štúdia – Miestnosť",
   "tone": "light",
-  "L": 132,
+  "L": 127,
   "red": 0,
   "head": "f_studio",
   "q": 3,
-  "edge": 128,
-  "darkShare": 0.21
+  "edge": 122,
+  "darkShare": 0.3
+ },
+ {
+  "id": "r23",
+  "cat": "masaz",
+  "kind": "F",
+  "grp": null,
+  "title": "Fotka zo štúdia – Masáž chrbta pri svetle",
+  "tone": "dark",
+  "L": 117,
+  "red": 0,
+  "head": "f_chrbat",
+  "q": 3,
+  "edge": 126,
+  "darkShare": 0.18
  },
  {
   "id": "e1",
@@ -958,12 +972,12 @@
   "grp": "edu",
   "title": "Carousel: Prečo po bankovaní ostanú kruhy?",
   "tone": "light",
-  "L": 162,
+  "L": 159,
   "red": 0,
   "head": "f_banky",
   "q": 3,
-  "edge": 171,
-  "darkShare": 0.13
+  "edge": 169,
+  "darkShare": 0.17
  },
  {
   "id": "e2",
@@ -972,12 +986,12 @@
   "grp": "edu",
   "title": "Carousel: Maderoterapia – čo robia valčeky?",
   "tone": "light",
-  "L": 163,
+  "L": 160,
   "red": 0,
   "head": "f_madero",
   "q": 3,
-  "edge": 164,
-  "darkShare": 0.05
+  "edge": 161,
+  "darkShare": 0.08
  },
  {
   "id": "e3",
@@ -986,12 +1000,12 @@
   "grp": "edu",
   "title": "Carousel: Idete na prvú masáž?",
   "tone": "light",
-  "L": 166,
+  "L": 163,
   "red": 0,
   "head": "f_hlava",
   "q": 3,
-  "edge": 167,
-  "darkShare": 0.04
+  "edge": 165,
+  "darkShare": 0.06
  },
  {
   "id": "e4",
@@ -1000,12 +1014,12 @@
   "grp": "edu",
   "title": "Carousel: 30, 60 alebo 90 minút?",
   "tone": "light",
-  "L": 166,
+  "L": 164,
   "red": 0,
   "head": "f_chrbat",
   "q": 3,
   "edge": 184,
-  "darkShare": 0.05
+  "darkShare": 0.08
  },
  {
   "id": "e5",
@@ -1014,12 +1028,12 @@
   "grp": "edu",
   "title": "Carousel: Scratching therapy",
   "tone": "light",
-  "L": 162,
+  "L": 158,
   "red": 0,
   "head": "f_ruky",
   "q": 3,
-  "edge": 165,
-  "darkShare": 0.03
+  "edge": 162,
+  "darkShare": 0.05
  },
  {
   "id": "c1",
@@ -1028,11 +1042,11 @@
   "grp": "cennik",
   "title": "Carousel: Cenník masáží",
   "tone": "light",
-  "L": 149,
+  "L": 146,
   "red": 0,
   "head": null,
   "q": 3,
-  "edge": 195,
+  "edge": 196,
   "darkShare": 0.32
  }
 ]
