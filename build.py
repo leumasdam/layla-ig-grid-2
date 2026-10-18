@@ -61,6 +61,11 @@ ORG = [("o073", "priestor", "Štúdio"), ("o010", "priestor", "Uteráky a svieč
        ("o163", "masaz", "Masáž nôh"), ("o003", "priestor", "Oddychový kútik"), ("o157", "masaz", "Masáž chrbta – štyri ruky"), ("o170", "priestor", "Hodžova 4304/20")]
 for k, (o, cat, title) in enumerate(ORG, 1):
     add(f"r{k:02d}", f"organic_posts/LAYLA_org_{k:02d}_{o}.png", "F", cat, None, None, 3, "Fotka zo štúdia – " + title)
+MORE = [("o011", "priestor", "Uteráky pri sviečke"), ("o037", "priestor", "Sviečky a difuzér"), ("o051", "priestor", "Monstera"),
+        ("o086", "madero", "Valčeky na maderoterapiu"), ("o111", "masaz", "Banky a kliešte"), ("o117", "madero", "Nástroje na komode"),
+        ("o126", "masaz", "Masáž šije"), ("o140", "masaz", "Ruky na chrbte"), ("o144", "masaz", "Masáž hlavy zblízka"), ("o031", "priestor", "Miestnosť")]
+for k, (o, cat, title) in enumerate(MORE, 13):
+    add(f"r{k:02d}", f"foto/{o}.jpg", "F", cat, None, None, 3, "Fotka zo štúdia – " + title)
 EDU = [("1_bankovanie", "Carousel: Prečo po bankovaní ostanú kruhy?"), ("2_maderoterapia", "Carousel: Maderoterapia – čo robia valčeky?"),
        ("3_prva_masaz", "Carousel: Idete na prvú masáž?"), ("4_30_60_90", "Carousel: 30, 60 alebo 90 minút?"), ("5_scratching", "Carousel: Scratching therapy")]
 for k, (e, title) in enumerate(EDU, 1):
@@ -68,25 +73,30 @@ for k, (e, title) in enumerate(EDU, 1):
 add("c1", "LAYLA_carousel_1_v2_1080x1350.png", "V", "cennik", "cennik", None, 3, "Carousel: Cenník masáží")
 
 # posty z tej istej fotky nesmú byť blízko seba → spoločný „head“ (rytmus ho drží od seba)
-SAME = {"f_banky": ["e1", "r08", "d04", "d35", "d06"], "f_madero": ["e2", "r05", "d06", "d11"], "f_hlava": ["e3", "r03", "d10", "d16", "d35", "d41"],
-        "f_chrbat": ["e4", "r06", "d14", "d38"], "f_studio": ["r01", "d01", "d38", "d13"], "f_ruky": ["e5", "r11", "d20"], "f_lounge": ["r10", "d07", "d12"]}
+SAME = {"f_banky": ["e1", "r08", "r17", "d04", "d35", "d06"], "f_madero": ["e2", "r05", "r16", "r18", "d03", "d06", "d11", "d17"], "f_hlava": ["e3", "r03", "r21", "d10", "d16", "d35", "d41"],
+        "f_chrbat": ["e4", "r06", "r19", "d14", "d38"], "f_studio": ["r01", "r22", "d01", "d33", "d19", "d13"], "f_ruky": ["e5", "r11", "r20", "d20"], "f_lounge": ["r10", "d07", "d12"],
+        "f_uteraky": ["r02", "r13", "d11"], "f_komoda": ["r04", "r07", "r14", "r15"]}
 HEAD = {}
 for h, ids in SAME.items():
     for i in ids: HEAD.setdefault(i, h)
-# návrh: výber (24 navrhnutých) + v každom riadku jedna reálna fotka po uhlopriečke, medzi to obálky carouselov
-VYBER = ["d22", "d23", "d25", "d26", "d32", "d21", "d33", "d27", "d02", "d34", "d40", "d29", "d28", "d39", "d36", "d37", "d31", "d09", "d38", "d16", "d03", "d06", "d07", "d35"]
-grid, d = [], 0
-for r in range(12):
-    for c in range(3):
-        if c == r % 3: grid.append(f"r{r + 1:02d}")
-        else: grid.append(VYBER[d]); d += 1
-for k, cid in zip([4, 13, 22, 31, 40, 49], ["c1", "e1", "e2", "e3", "e4", "e5"]):
-    grid.insert(k, cid)
+# FINÁLNY GRID: všetko, čo k sebe ladí; tmavé a duplicitné posty idú do odložených (dajú sa vrátiť ťahaním)
+OUT = ["d04", "d08", "d14", "d20", "d15", "d05", "d13", "d12"]   # tmavé (bankovanie, nohy, magazín, rám) a duplicity (polaroid, poukaz, otvorené)
+START = ["r01", "d22", "d23"]                             # prvý riadok: štúdio, Telo v pohode, logo
+grid = START + [i for i in T if i not in OUT and i not in START]
 PARKED = [i for i in T if i not in grid]
 
+def look(im, seed):
+    a = np.asarray(im).astype(float) / 255
+    a = 0.035 + 0.94 * a                                   # zdvihnuté čierne (matný film)
+    a = a + 0.06 * a * (1 - a) * 2                          # jemné zjasnenie stredov
+    a[..., 0] *= 1.02; a[..., 2] *= 0.965                   # teplejšie
+    g = a.mean(axis=2, keepdims=True); a = g + (a - g) * 0.9   # o 10 % menej saturácie
+    rng = np.random.default_rng(seed); a += rng.normal(0, 0.012, a.shape[:2])[..., None]   # zrno
+    return Image.fromarray((a.clip(0, 1) * 255).astype("uint8"))
 posts, thumbs = [], {}
 for pid, (f, kind, cat, grp, head, q, title) in T.items():
-    im = Image.open(S / f).convert("RGB")
+    im = Image.open(S / f).convert("RGB").resize((1080, 1350), Image.LANCZOS)
+    im = look(im, sum(map(ord, pid)))
     full = im.resize((1080, 1350), Image.LANCZOS); full.save(ROOT / "export" / f"{pid}.jpg", quality=90)
     th = im.resize((540, 675), Image.LANCZOS).filter(ImageFilter.UnsharpMask(radius=0.8, percent=60, threshold=2))
     th.save(ROOT / "thumbs" / f"{pid}.webp", quality=88)
