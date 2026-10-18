@@ -552,12 +552,12 @@
   "grp": "dych",
   "title": "Dýchajte.",
   "tone": "light",
-  "L": 182,
+  "L": 218,
   "red": 0,
   "head": null,
   "q": 3,
-  "edge": 189,
-  "darkShare": 0.04
+  "edge": 218,
+  "darkShare": 0.01
  },
  {
   "id": "d41",
