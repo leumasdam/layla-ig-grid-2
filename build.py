@@ -66,6 +66,12 @@ MORE = [("o011", "priestor", "Uteráky pri sviečke"), ("o037", "priestor", "Svi
         ("o126", "masaz", "Masáž šije"), ("o140", "masaz", "Ruky na chrbte"), ("o144", "masaz", "Masáž hlavy zblízka"), ("o031", "priestor", "Miestnosť"), ("o134", "masaz", "Masáž chrbta pri svetle")]
 for k, (o, cat, title) in enumerate(MORE, 13):
     add(f"r{k:02d}", f"foto/{o}.jpg", "F", cat, None, None, 3, "Fotka zo štúdia – " + title)
+add("d47", "ig_nove/d47.png", "V", "masaz", "chrbat", None, 3, "Doprajte telu regeneráciu")
+add("d48", "ig_nove/d48.png", "T", "znacka", "logo", None, 2, "Logo v kruhu")
+add("d49", "ig_nove/d49.png", "V", "sluzby", "sluzby", None, 3, "Všetko pod jednou strechou")
+add("d50", "ig_nove/d50.png", "V", "rezervacia", "rezerv", None, 3, "Rezervujte si chvíľu pokoja")
+add("d51", "ig_nove/d51.png", "T", "recenzie", "recenzia", None, 3, "Recenzie – výzva na hodnotenie")
+add("d52", "ig_nove/d52.png", "T", "recenzie", "recenzia", None, 1, "Recenzia – šablóna (vložiť skutočnú)")
 EDU = [("1_bankovanie", "Carousel: Prečo po bankovaní ostanú kruhy?"), ("2_maderoterapia", "Carousel: Maderoterapia – čo robia valčeky?"),
        ("3_prva_masaz", "Carousel: Idete na prvú masáž?"), ("4_30_60_90", "Carousel: 30, 60 alebo 90 minút?"), ("5_scratching", "Carousel: Scratching therapy")]
 for k, (e, title) in enumerate(EDU, 1):
@@ -82,6 +88,7 @@ for h, ids in SAME.items():
 # FINÁLNY GRID: všetko, čo k sebe ladí; tmavé a duplicitné posty idú do odložených (dajú sa vrátiť ťahaním)
 OUT = []   # všetko v gride (tmavé posty dávajú feedu hĺbku)   # tmavé (bankovanie, nohy, magazín, rám) a duplicity (polaroid, poukaz, otvorené)
 START = ["r01", "d22", "d23"]                             # prvý riadok: štúdio, Telo v pohode, logo
+OUT = OUT + ["d52"]   # šablóna recenzie ide do odložených, kým nebude reálny text
 grid = START + [i for i in T if i not in OUT and i not in START]
 PARKED = [i for i in T if i not in grid]
 
