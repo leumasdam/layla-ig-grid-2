@@ -69,7 +69,7 @@ for k, (o, cat, title) in enumerate(MORE, 13):
 EDU = [("1_bankovanie", "Carousel: Prečo po bankovaní ostanú kruhy?"), ("2_maderoterapia", "Carousel: Maderoterapia – čo robia valčeky?"),
        ("3_prva_masaz", "Carousel: Idete na prvú masáž?"), ("4_30_60_90", "Carousel: 30, 60 alebo 90 minút?"), ("5_scratching", "Carousel: Scratching therapy")]
 for k, (e, title) in enumerate(EDU, 1):
-    add(f"e{k}", f"edu_a2/LAYLA_edu_{e}_1.png", "V", "edukacia", "edu", None, 3, title)
+    add(f"e{k}", f"edu_covers_v2/e{k}.png", "V", "edukacia", "edu", None, 3, title)
 add("c1", "LAYLA_carousel_1_v2_1080x1350.png", "V", "cennik", "cennik", None, 3, "Carousel: Cenník masáží")
 
 # posty z tej istej fotky nesmú byť blízko seba → spoločný „head“ (rytmus ho drží od seba)
